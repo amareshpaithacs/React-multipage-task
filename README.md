@@ -1,20 +1,72 @@
-<<<<<<< HEAD
-# React-multipage-task
-=======
-# React + Vite
+# ITCO - IT Services Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-page React application built for an IT services and consulting company. This project was put together to showcase responsive design, modern UI components, and client-side routing using React.
 
-Currently, two official plugins are available:
+## What's Inside
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Multi-Page Layout**: Fully functioning routing for all pages (Home, About, Services, Team, Contact, Blog Details).
+- **Responsive Design**: Built with Bootstrap to ensure everything looks solid on mobile, tablet, and desktop.
+- **Dynamic Sliders**: Used `react-slick` for the client testimonials and brand carousels.
+- **Reusable Components**: Extracted UI elements like the Newsletter CTA and Header/Footer to keep the codebase clean and DRY.
+- **Interactive Forms**: Contact and newsletter forms with clean inline state feedback.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React (v18)
+- Vite (for super fast bundling and HMR)
+- React Router DOM (v6)
+- Bootstrap 5 & Bootstrap Icons
+- React Slick (Carousels)
+- Vanilla CSS (for custom styling and component overrides)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 20b6744 (completed the React-multipage-Task)
+If you want to spin this up locally, it's pretty straightforward.
+
+1. **Get the code**: Clone the repo or download the folder.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the dev server**:
+   ```bash
+   npm run dev
+   ```
+4. Open up your browser to `http://localhost:5173` (or whatever port Vite throws at you).
+
+## Project Structure
+
+Here is a high-level overview of how the project is organized:
+
+```text
+react-multipage-task/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Actions deployment script
+├── public/                 # Static assets that don't need compilation
+├── src/
+│   ├── assets/             # Images, icons, and local fonts
+│   ├── components/         # Reusable UI components
+│   │   ├── about/
+│   │   ├── blog-details/
+│   │   ├── common/         # Header, Footer, NewsletterCta, etc.
+│   │   ├── contact/
+│   │   ├── home/
+│   │   ├── services/
+│   │   └── team/
+│   ├── pages/              # Main route views
+│   │   ├── About.jsx
+│   │   ├── BlogDetails.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Home.jsx
+│   │   ├── Services.jsx
+│   │   └── Team.jsx
+│   ├── styles/
+│   │   └── main.css        # Global CSS and utility classes
+│   ├── App.jsx             # React Router configuration
+│   └── main.jsx            # React application entry point
+├── index.html              # Main HTML template
+├── package.json            # Project dependencies and scripts
+├── vite.config.js          # Vite build configuration
+└── README.md               # You are here!
+```
